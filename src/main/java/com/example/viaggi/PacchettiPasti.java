@@ -22,11 +22,11 @@ public class PacchettiPasti extends PacchettiViaggi{
         if (this == o) return true;
         if (!(o instanceof PacchettiPasti that)) return false;
         return isPensione == that.isPensione;
+
     }
 
     public String toString() {
         return "la pensione è mezza?: " + isPensione;
     }
-
 
 }
