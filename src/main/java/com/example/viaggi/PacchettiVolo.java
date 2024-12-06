@@ -19,13 +19,21 @@ public class PacchettiVolo extends PacchettiViaggi{
     }
 
     public String toString() {
-        return "il viaggio è solo di andata?: " + isAndata;
+        return "il viaggio è di sola andata?: " + isAndata;
     }
 
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof PacchettiVolo that)) return false;
         return isAndata == that.isAndata;
+    }
+
+    public double calcolaCosto () {
+        if (isAndata == true) {
+            return super.calcolaCosto() + (super.calcolaCosto() * 0.5);
+        } else if (isAndata == false) {
+            return super.calcolaCosto() + (super.calcolaCosto() * 0.85);
+        }
     }
 
 }

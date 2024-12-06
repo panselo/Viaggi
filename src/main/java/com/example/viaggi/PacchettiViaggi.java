@@ -43,4 +43,8 @@ public class PacchettiViaggi {
         return "Destinazione: " + destinazione + " Costo: " + costo + " Durata: " + durata;
     }
 
+    public double calcolaCosto(){
+        return getCosto();
+    }
+
 }

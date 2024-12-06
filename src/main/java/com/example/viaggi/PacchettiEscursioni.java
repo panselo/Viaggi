@@ -20,7 +20,7 @@ public class PacchettiEscursioni extends PacchettiViaggi {
     }
 
     public String toString() {
-        return "numeroEscursioni=" + numeroEscursioni +;
+        return "numeroEscursioni=" + numeroEscursioni;
     }
 
     public boolean equals(Object o) {
