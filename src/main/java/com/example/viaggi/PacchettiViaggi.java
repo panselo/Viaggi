@@ -1,5 +1,7 @@
 package com.example.viaggi;
 
+import java.util.Objects;
+
 public class PacchettiViaggi {
 
     private String destinazione;
@@ -47,4 +49,10 @@ public class PacchettiViaggi {
         return getCosto();
     }
 
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof PacchettiViaggi that)) return false;
+        return durata == that.durata && Double.compare(costo, that.costo) == 0 && Objects.equals(destinazione, that.destinazione);
+    }
+    
 }

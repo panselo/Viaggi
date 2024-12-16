@@ -6,7 +6,7 @@ public class PacchettiVolo extends PacchettiViaggi{
 
     private boolean isAndata;
 
-    public boolean isAndata() {
+    public boolean getAndata() {
         return isAndata;
     }
     public void setAndata(boolean andata) {
@@ -31,7 +31,7 @@ public class PacchettiVolo extends PacchettiViaggi{
     public double calcolaCosto () {
         if (isAndata == true) {
             return super.calcolaCosto() + (super.calcolaCosto() * 0.5);
-        } else if (isAndata == false) {
+        } else {
             return super.calcolaCosto() + (super.calcolaCosto() * 0.85);
         }
     }

@@ -29,5 +29,9 @@ public class PacchettiEscursioni extends PacchettiViaggi {
         return numeroEscursioni == that.numeroEscursioni;
     }
 
+    public double calcolaCosto () {
+        return super.getCosto() + ((super.getCosto() * 0.15) * numeroEscursioni);
+    }
+
 }
 

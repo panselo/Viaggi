@@ -6,7 +6,7 @@ public class PacchettiPasti extends PacchettiViaggi{
 
     private boolean isPensione;
 
-    public boolean isPensione() {
+    public boolean getPensione() {
         return isPensione;
     }
     public void setPensione(boolean pensione) {
@@ -27,6 +27,14 @@ public class PacchettiPasti extends PacchettiViaggi{
 
     public String toString() {
         return "la pensione è mezza?: " + isPensione;
+    }
+
+    public double calcolaCosto () {
+        if (isPensione == true) {
+            return super.getCosto() + getDurata() * 35;
+        } else {
+            return super.getCosto() + getDurata() * 25;
+        }
     }
 
 }
